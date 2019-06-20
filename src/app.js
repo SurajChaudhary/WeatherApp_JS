@@ -34,5 +34,6 @@ document.getElementById('w-change-btn').addEventListener('click',(e) => {
 function getWeather(){
   weather.getWeather()
   .then(results => ui.paint(results))
-  .catch(err => document.getElementById('errorDiv').innerHTML = err);
+  .catch(err => {
+    document.getElementById('errorDiv').innerHTML = err});
 }
